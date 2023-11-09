@@ -221,11 +221,10 @@ from langchain.chains import RetrievalQA
 
 flan_t5_qa = RetrievalQA.from_chain_type(llm = flan_t5, chain_type = "stuff",
                                          retriever = docsearch.as_retriever(),
-                                         return_source_documents = True)
+                                         return_source_documents = False)
 
 
-query = "what does numpy provide support for?"
-response = flan_t5_qa(query)
+# query = "what numpy provide support for?"
+# response = flan_t5_qa(query)
 
-
-response["result"]
+# response["result"]

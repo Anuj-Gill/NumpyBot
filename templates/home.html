@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <form action="/processRequest" method="post">
+    <label>Enter Request: </label>
+    <input type="text" name="request" id="request">
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
